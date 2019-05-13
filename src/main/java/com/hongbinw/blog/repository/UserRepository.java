@@ -1,16 +1,9 @@
 package com.hongbinw.blog.repository;
 
 import com.hongbinw.blog.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 
-public interface UserRepository {
-    //创建或修改用户
-    User saveOrUpdateUser(User user);
+public interface UserRepository extends JpaRepository<User,Long> {
 
-    void deleteUser(Long id);
-
-    User getUserById(Long id);
-
-    List<User> listUsers();
 }
