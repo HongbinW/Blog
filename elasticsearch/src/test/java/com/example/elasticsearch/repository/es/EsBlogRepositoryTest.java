@@ -26,7 +26,12 @@ public class EsBlogRepositoryTest {
     public void initRepositoryData(){
         //清除所有数据
         esBlogRepository.deleteAll();
-        esBlogRepository.save(new EsBlog())
+        esBlogRepository.save(new EsBlog("登鹳雀楼","王之涣的登鹳雀楼",
+                "白日依山尽，黄河入海流，欲求千里目，更上一层楼。"));
+        esBlogRepository.save(new EsBlog("相思","王维的相思",
+                "红豆生南国，春来发几枝。愿君多采撷，此物最相思。"));
+        esBlogRepository.save(new EsBlog("静夜思","李白的静夜思",
+                "床前明月光，疑是地上霜。举头望明月，低头思故乡。"));
     }
 
     //根据关键字全文搜索，会从title、summary、content三个地方只要有一个搜索到就显示
